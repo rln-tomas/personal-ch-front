@@ -6,7 +6,7 @@ export const Home = () => {
   const classes = useStyles()
   return (
         <div className={classes.homeContainer}>
-            This is the home page
+            This is the home page!
         </div>
   )
 }
