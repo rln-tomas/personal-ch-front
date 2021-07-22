@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 module.exports = {
   output: {
     filename: 'app.bundle.js'
@@ -6,7 +7,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/index.html'
-    })
+    }),
+    new Dotenv() // For environments variables
   ],
   module: {
     rules: [
@@ -19,7 +21,8 @@ module.exports = {
             presets: [
               '@babel/preset-env',
               '@babel/preset-react'
-            ]
+            ],
+            plugins: ['@babel/plugin-transform-runtime'] // For redux
           }
         }
       }
