@@ -10,19 +10,11 @@ export const postSlice = createSlice({
   reducers: {
     setPosts: (state, { payload }) => {
       const { posts = [] } = payload
-      const stateT = {
-        ...state,
-        posts: posts
-      }
-      return stateT
+      state.posts = [...posts]
     },
     deletePost: (state, { payload }) => {
       const { item = { id: null } } = payload
-      const stateT = {
-        ...state,
-        posts: state.posts.filter(it => it.id !== item.id)
-      }
-      return stateT
+      state.posts = [...state.posts.filter(it => it.id !== item.id)]
     }
   }
 })
