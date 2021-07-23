@@ -1,7 +1,11 @@
 import { makeStyles } from '@material-ui/core'
 
 export const useStyles = makeStyles(theme => ({
-  homeContainer: {
-    backgroundColor: '#fff'
+  postRow: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  postCell: {
+
   }
 }))
