@@ -26,7 +26,24 @@ export const Post = ({ item = { id: null, userId: null, body: '', title: '' } })
   }
 
   const handleEditClick = () => {
-    console.log('Edit')
+    dispatch({
+      type: 'posts/setPost',
+      payload: {
+        post: item
+      }
+    })
+    dispatch({
+      type: 'posts/setEdit',
+      payload: {
+        edit: true
+      }
+    })
+    dispatch({
+      type: 'posts/setModal',
+      payload: {
+        openModal: true
+      }
+    })
   }
 
   const [expanded, setExpanded] = useState(false)

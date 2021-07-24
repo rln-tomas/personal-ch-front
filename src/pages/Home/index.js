@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import axios from 'axios'
 import { useDispatch } from 'react-redux'
-import { PostList } from '../../components'
+import { PostList, CreateModal } from '../../components'
 import { useStyles } from './styles'
 
 export const Home = () => {
@@ -19,11 +19,14 @@ export const Home = () => {
 
   const classes = useStyles()
   return (
+    <>
         <div className={classes.homeContainer}>
             {
               // Navbar here
             }
             <PostList />
         </div>
+        <CreateModal />
+    </>
   )
 }
