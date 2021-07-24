@@ -5,9 +5,9 @@ import { Home } from './pages'
 export const App = () => {
   return (
         <BrowserRouter>
-          <Switch>
-            <Route exact path='/' component={Home} />
-          </Switch>
+            <Switch>
+              <Route exact path='/' component={Home} />
+            </Switch>
         </BrowserRouter>
   )
 }
