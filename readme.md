@@ -12,3 +12,8 @@ Install the dependencies:
 ```bash
     npm install
 ```
+
+## Deployed page: 
+```http
+    https://challenge-personal-alkemy-keymirror.vercel.app/
+```

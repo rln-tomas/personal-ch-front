@@ -1,10 +1,8 @@
 import { makeStyles } from '@material-ui/core'
 
 export const useStyles = makeStyles(theme => ({
-  homeContainer: {
+  postListContainer: {
     display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center'
-
+    padding: '2%'
   }
 }))
