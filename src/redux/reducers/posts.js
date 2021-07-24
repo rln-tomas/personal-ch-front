@@ -34,6 +34,12 @@ export const postSlice = createSlice({
     setEdit: (state, { payload }) => {
       const { edit = false } = payload
       state.edit = edit
+    },
+    updatePosts: (state, { payload }) => {
+      const { post = { id: null, title: null, body: null, userId: null } } = payload
+      const element = state.posts.find(e => e.id === post.id)
+      const indexElement = state.posts.indexOf(element)
+      state.posts.splice(indexElement, indexElement, post)
     }
   }
 })

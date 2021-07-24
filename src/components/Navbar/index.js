@@ -10,6 +10,18 @@ export const Navbar = () => {
   const dispatch = useDispatch()
 
   const handleOpenModal = () => {
+    const post = {
+      id: '',
+      body: '',
+      title: '',
+      userId: ''
+    }
+    dispatch({
+      type: 'posts/setPost',
+      payload: {
+        post: post
+      }
+    })
     dispatch({
       type: 'posts/setModal',
       payload: {
